@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins;
+}
+body {
+  background-color: rgb(207, 207, 207);
+}
+.partnerrow {
+  max-width: 100%;
+  min-height: 37px;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+.partnermessage {
+  max-width: 50%;
+  font-size: 10px;
+  background-color: rgb(247, 203, 203);
+  color: black;
+  overflow-wrap: break-word;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.123);
+  margin-bottom: 5px;
+  padding: 6px 7px;
+  margin-left: 5px;
+  text-align: left;
+  border-radius: 15px;
+  border-bottom-left-radius: 0;
+}
+.myrow {
+  max-width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+.mymessage {
+  max-width: 50%;
+  padding: 6px 7px;
+  background-color: rgb(58, 58, 58);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.322);
+  color: whitesmoke;
+  font-size: 10px;
+  overflow-wrap: break-word;
+  margin-right: 5px;
+  text-align: right;
+  border-radius: 15px;
+  border-bottom-right-radius: 0;
+}
+#activeNow {
+  font-size: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 12px;
+}
+.header {
+  color: black;
+  position: relative;
+  width: 350px;
+  display: flex;
+  padding-left: 10px;
+  justify-content: flex-start;
+  flex-direction: column;
+  height: 42px;
+  position: fixed;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  z-index: 1;
+  /* border-bottom: 1px solid black; */
+  top: 5;
+  background-color: rgb(233, 52, 88);
+}
+.messagesBox {
+  position: fixed;
+  top: 40px;
+  overflow-y: hidden;
+  overflow: scroll;
+  /* background-color: red; */
+  max-height: 85vh;
+  width: 350px;
+}
+.messagesBox::-webkit-scrollbar {
+  display: none;
+}
+form {
+  display: flex;
+  justify-content: center;
+  width: 350px;
+  height: 30px;
+  position: fixed;
+  bottom: 8px;
+}
+a {
+  cursor: pointer;
+}
+.msgInp {
+  width: 320px;
+  background: whitesmoke;
+  outline: none;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.342);
+  color: black;
+  margin-left: 2px;
+  border-radius: 20px;
+  border: none;
+  line-height: 1.5;
+  padding: 0 10px;
+  padding-right: 35px;
+  transition: 0.2s;
+}
+.msgInp:focus {
+  background-color: rgb(204, 204, 204);
+}
+.btn {
+  background-color: rgb(233, 52, 88);
+  border: none;
+  color: black;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-left: 3px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.671);
+}
+.fileButton {
+  font-size: 1.25rem;
+  color: black;
+  background: none;
+  border: none;
+  outline: none;
+  position: absolute;
+  right: 40px;
+  bottom: 0;
+  cursor: pointer;
+}
+input[type="file"] {
+  display: none;
+}
+.fileButton:hover i {
+  color: rgb(138, 138, 138);
+}
+.container {
+  position: relative;
+  width: 350px;
+  height: 99vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  margin-top: 5px;
+  /* background: url("https://i.pinimg.com/474x/8e/6b/e9/8e6be91a01ba06f18b9eddfb944b2b42.jpg"); */
+  background: rgb(236, 236, 236);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.486);
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    width: 98%;
+  }
+  .header {
+    padding-top: 5px;
+    width: 98%;
+    height: 60px;
+  }
+  .messagesBox {
+    width: 98%;
+  }
+  form {
+    width: 98%;
+    height: 50px;
+    padding: 0 4px;
+  }
+  .fileButton {
+    right: 70px;
+    font-size: 27px;
+  }
+  .btn {
+    width: 50px;
+    height: 50px;
+    font-size: 27px;
+  }
+  .msgInp {
+    width: 320px;
+    font-size : 20px;
+    padding-right: 45px;
+  }
+  .messagesBox {
+    top: 60px;
+    height: 77vh;
+  }
+  .mymessage {
+    max-width: 60%;
+    border-radius: 30px;
+    padding: 10px;
+    font-size: 20px;
+    border-bottom-right-radius: 0;
+  }
+  .partnermessage {
+    max-width: 60%;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 30px;
+    border-bottom-left-radius: 0;
+  }
+  #activeNow {
+    bottom: 10px;
+    font-size: 15px;
+    left: 10px;
+  }
+  .btn:active {
+    background-color: rgb(209, 19, 57);
+    outline: none;  
+  }
+  .btn:focus {
+    background-color: rgb(209, 19, 57);
+    outline: none;  
+  }
+}
